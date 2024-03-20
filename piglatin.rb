@@ -40,7 +40,6 @@ def piggify(str)
     s = "#{str[idx..-1]}#{str[..idx - 1]}ay"
   end
   s
-
 end
 
 def english_to_pig(text)
