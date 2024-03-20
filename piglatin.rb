@@ -26,9 +26,9 @@
 
 def piggify(str)
   vowels = "aiueo"
-  s = ""
+  word = ""
   if vowels.include?(str[0].downcase)
-    s = "#{str}#{%w[nay yay hay way].sample}"
+    word = "#{str}#{%w[nay yay hay way].sample}"
   else
     idx = 0
     str.downcase.chars.each do |char|
@@ -37,9 +37,9 @@ def piggify(str)
       end
       idx += 1
     end
-    s = "#{str[idx..-1]}#{str[..idx - 1]}ay"
+    word = "#{str[idx..-1]}#{str[..idx - 1]}ay"
   end
-  s
+  word
 end
 
 def english_to_pig(text)
